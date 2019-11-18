@@ -30,3 +30,4 @@ jobs:
     restore-keys: |
       ${{ runner.os }}-node-
 if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened')on: [push]
+if: github.event_name == 'pull_request' && github.event.action == 'closed'
