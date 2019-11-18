@@ -1,6 +1,5 @@
 name: Node CI
 
-on: [push]
 
 jobs:
   build:
@@ -30,3 +29,4 @@ jobs:
     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
     restore-keys: |
       ${{ runner.os }}-node-
+if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened')on: [push]
