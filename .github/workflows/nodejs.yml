@@ -4,8 +4,9 @@ on: [push]
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+env:
+  NODE_VERSION: 12.x    
+  runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
